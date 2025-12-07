@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+--if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -74,12 +74,12 @@ return {
         },
 
         ["<Leader>r"] = {
-           function()
-              local filename = vim.fn.expand("%")
-              vim.cmd("split | terminal go run " .. filename)
-           end,
-           desc = "Run current Go file",
-        }
+          function()
+            local filename = vim.fn.expand "%"
+            vim.cmd("split | terminal go run " .. filename)
+          end,
+          desc = "Run current Go file",
+        },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
