@@ -73,6 +73,13 @@ return {
           desc = "Close buffer from tabline",
         },
 
+        ["<Leader>r"] = {
+           function()
+              local filename = vim.fn.expand("%")
+              vim.cmd("split | terminal go run " .. filename)
+           end,
+           desc = "Run current Go file",
+        }
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
