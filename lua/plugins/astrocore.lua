@@ -73,7 +73,7 @@ return {
           desc = "Close buffer from tabline",
         },
 
-        ["<Leader>r"] = {
+        ["<Leader>rg"] = {
           function()
             local filename = vim.fn.expand "%"
             vim.cmd("split | terminal go run " .. filename)
